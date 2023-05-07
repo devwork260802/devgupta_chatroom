@@ -6,7 +6,7 @@ const messageInput = document.getElementById('messageInp')
 const messageContainer = document.querySelector(".container")
 
 // Audio that will play on receiving messages
-var audio = new Audio('../music/ting.mp3');
+var audio = new Audio('music/ting.mp3');
 
 // Function to append User Information to the container
 const append = (message, position)=>{
