@@ -22,6 +22,15 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
+  build-node:
+    runs-on: ubuntu-latest
+    container: node:16
+    steps:
+      - run: node --version 
+      - run: npm --version  
+      - uses: actions/checkout@v3 
+      - run: npm install
+      - run: node server/index.js
   # Single deploy job since we're just deploying
   deploy:
     environment:
